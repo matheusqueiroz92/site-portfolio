@@ -62,10 +62,14 @@ const typed = new Typed('.multiple-text', {
 /*==================== dark/light mode ====================*/
 const darkToggle = document.querySelector(".dark-toggle");
 const secao1 = document.querySelector(".secao1");
-const style = document.querySelector(".elementor-kit-8");
+const style = document.querySelector(":root");
+const logoLight = document.getElementById("logo-light-mode");
+const logoDark = document.getElementById("logo-dark-mode");
 
 function handleDarkMode() {
     style.classList.toggle("dark-mode");
+    logoLight.classList.toggle("logo-show");
+    logoDark.classList.toggle("logo-none")
 }
 
 darkToggle.addEventListener("change", handleDarkMode);
