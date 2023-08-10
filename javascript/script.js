@@ -65,11 +65,19 @@ const secao1 = document.querySelector(".secao1");
 const style = document.querySelector(":root");
 const logoLight = document.getElementById("logo-light-mode");
 const logoDark = document.getElementById("logo-dark-mode");
+const icon = document.getElementById("icon");
+
+let verify = false;
 
 function handleDarkMode() {
     style.classList.toggle("dark-mode");
     logoLight.classList.toggle("logo-show");
-    logoDark.classList.toggle("logo-none")
+    logoDark.classList.toggle("logo-none");
+    verify = !verify;
+
+    (verify) ? icon.href = "/images/logo-matheus-dev-icone-2.png"
+    : icon.href = "/images/logo-matheus-dev-icone.png"
+    
 }
 
 darkToggle.addEventListener("change", handleDarkMode);
